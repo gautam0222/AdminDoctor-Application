@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>all_reports.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #6aab73;}
+.s2 { color: #bcbec4;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+all_reports.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+
+<span class="s3">class </span><span class="s0">AllReportsPage </span><span class="s3">extends </span><span class="s0">StatelessWidget </span><span class="s2">{</span>
+  <span class="s3">final </span><span class="s0">List</span><span class="s2">&lt;</span><span class="s0">Map</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">, </span><span class="s0">dynamic</span><span class="s2">&gt;&gt; </span><span class="s0">reports </span><span class="s2">= [</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;John Doe&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Knee Replacement&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-02-10&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Successful&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Mary Smith&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Gallbladder Removal&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-02-15&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Successful&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Alex Johnson&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Fracture Surgery&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-01&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Successful&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Emma Brown&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Heart Bypass&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-01-25&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Successful&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Michael Davis&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Liver Transplant&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-01-20&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Ongoing Recovery&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Sophia Wilson&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Appendectomy&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-02-28&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Successful&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;James Anderson&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Brain Surgery&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-05&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Ongoing Recovery&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Isabella Martinez&quot;</span><span class="s2">, </span><span class="s1">&quot;operation&quot;</span><span class="s2">: </span><span class="s1">&quot;Spinal Fusion&quot;</span><span class="s2">, </span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-01-10&quot;</span><span class="s2">, </span><span class="s1">&quot;status&quot;</span><span class="s2">: </span><span class="s1">&quot;Successful&quot;</span><span class="s2">},</span>
+  <span class="s2">];</span>
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build</span><span class="s2">(</span><span class="s0">BuildContext context</span><span class="s2">) {</span>
+    <span class="s3">return </span><span class="s0">Scaffold</span><span class="s2">(</span>
+      <span class="s0">appBar</span><span class="s2">: </span><span class="s0">AppBar</span><span class="s2">(</span><span class="s0">title</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Final Reports&quot;</span><span class="s2">)),</span>
+      <span class="s0">body</span><span class="s2">: </span><span class="s0">ListView</span><span class="s2">.</span><span class="s0">builder</span><span class="s2">(</span>
+        <span class="s0">padding</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s4">16</span><span class="s2">),</span>
+        <span class="s0">itemCount</span><span class="s2">: </span><span class="s0">reports</span><span class="s2">.</span><span class="s0">length</span><span class="s2">,</span>
+        <span class="s0">itemBuilder</span><span class="s2">: (</span><span class="s0">context</span><span class="s2">, </span><span class="s0">index</span><span class="s2">) {</span>
+          <span class="s3">var </span><span class="s0">report </span><span class="s2">= </span><span class="s0">reports</span><span class="s2">[</span><span class="s0">index</span><span class="s2">];</span>
+          <span class="s3">return </span><span class="s0">Card</span><span class="s2">(</span>
+            <span class="s0">elevation</span><span class="s2">: </span><span class="s4">4</span><span class="s2">,</span>
+            <span class="s0">margin</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">symmetric</span><span class="s2">(</span><span class="s0">vertical</span><span class="s2">: </span><span class="s4">8</span><span class="s2">),</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">ListTile</span><span class="s2">(</span>
+              <span class="s0">title</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Patient: </span><span class="s2">${</span><span class="s0">report</span><span class="s2">[</span><span class="s1">&quot;patient&quot;</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">)),</span>
+              <span class="s0">subtitle</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Operation: </span><span class="s2">${</span><span class="s0">report</span><span class="s2">[</span><span class="s1">'operation'</span><span class="s2">]}</span><span class="s1">\nDate: </span><span class="s2">${</span><span class="s0">report</span><span class="s2">[</span><span class="s1">'date'</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">),</span>
+              <span class="s0">trailing</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s0">report</span><span class="s2">[</span><span class="s1">&quot;status&quot;</span><span class="s2">], </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">color</span><span class="s2">: </span><span class="s0">report</span><span class="s2">[</span><span class="s1">&quot;status&quot;</span><span class="s2">] == </span><span class="s1">&quot;Successful&quot; </span><span class="s2">? </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">green </span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">orange</span><span class="s2">)),</span>
+            <span class="s2">),</span>
+          <span class="s2">);</span>
+        <span class="s2">},</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

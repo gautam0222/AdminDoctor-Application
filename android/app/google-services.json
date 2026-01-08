@@ -1,0 +1,163 @@
+{
+  "project_info": {
+    "project_number": "554600059294",
+    "firebase_url": "https://global-healthcure-56c92-default-rtdb.firebaseio.com",
+    "project_id": "global-healthcure-56c92",
+    "storage_bucket": "global-healthcure-56c92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554600059294:android:6b6846c640d8693721068f",
+        "android_client_info": {
+          "package_name": "com.docapp.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALGgTlb-ZbIc7GUhg44_yrvjJNLl67fOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554600059294-l5ptb3aq5jk2eiq88r2mfp4hgo8tesai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.globalHealth"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554600059294:android:bf741b4b9c01a9d421068f",
+        "android_client_info": {
+          "package_name": "com.example.global_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554600059294-uj50v0mqqmfvh7vomg190saviv0gujvl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.global_health",
+            "certificate_hash": "df1bbf5491aa8720540a107c9cf47fcf14e62e67"
+          }
+        },
+        {
+          "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALGgTlb-ZbIc7GUhg44_yrvjJNLl67fOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554600059294-l5ptb3aq5jk2eiq88r2mfp4hgo8tesai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.globalHealth"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554600059294:android:f95db3d097b74ee221068f",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALGgTlb-ZbIc7GUhg44_yrvjJNLl67fOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554600059294-l5ptb3aq5jk2eiq88r2mfp4hgo8tesai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.globalHealth"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554600059294:android:e366082e33243ce021068f",
+        "android_client_info": {
+          "package_name": "com.example.untitled2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALGgTlb-ZbIc7GUhg44_yrvjJNLl67fOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554600059294-sue19p6siscisrptbuv4h5c0da9qe4e2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "554600059294-l5ptb3aq5jk2eiq88r2mfp4hgo8tesai.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.globalHealth"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

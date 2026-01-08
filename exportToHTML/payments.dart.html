@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>payments.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #6aab73;}
+.s2 { color: #bcbec4;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #2aacb8;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+payments.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+
+<span class="s3">class </span><span class="s0">PaymentsPage </span><span class="s3">extends </span><span class="s0">StatelessWidget </span><span class="s2">{</span>
+  <span class="s3">final </span><span class="s0">List</span><span class="s2">&lt;</span><span class="s0">Map</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">, </span><span class="s0">dynamic</span><span class="s2">&gt;&gt; </span><span class="s0">paymentHistory </span><span class="s2">= [</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-20&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">1500</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;John Doe&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-18&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">2000</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Mary Smith&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-15&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">1800</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Alex Johnson&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-10&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">2500</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Emma Brown&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-08&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">3000</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Michael Davis&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-05&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">1600</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Sophia Wilson&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-03-02&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">1400</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;James Anderson&quot;</span><span class="s2">},</span>
+    <span class="s2">{</span><span class="s1">&quot;date&quot;</span><span class="s2">: </span><span class="s1">&quot;2025-02-28&quot;</span><span class="s2">, </span><span class="s1">&quot;amount&quot;</span><span class="s2">: </span><span class="s4">1900</span><span class="s2">, </span><span class="s1">&quot;patient&quot;</span><span class="s2">: </span><span class="s1">&quot;Isabella Martinez&quot;</span><span class="s2">},</span>
+  <span class="s2">];</span>
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build</span><span class="s2">(</span><span class="s0">BuildContext context</span><span class="s2">) {</span>
+    <span class="s0">int totalEarnings </span><span class="s2">= </span><span class="s0">paymentHistory</span><span class="s2">.</span><span class="s0">fold</span><span class="s2">(</span><span class="s4">0</span><span class="s2">, (</span><span class="s0">sum</span><span class="s2">, </span><span class="s0">item</span><span class="s2">) =&gt; </span><span class="s0">sum </span><span class="s2">+ (</span><span class="s0">item</span><span class="s2">[</span><span class="s1">'amount'</span><span class="s2">] </span><span class="s0">as int</span><span class="s2">));</span>
+
+    <span class="s3">return </span><span class="s0">Scaffold</span><span class="s2">(</span>
+      <span class="s0">appBar</span><span class="s2">: </span><span class="s0">AppBar</span><span class="s2">(</span><span class="s0">title</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Payments Received&quot;</span><span class="s2">)),</span>
+      <span class="s0">body</span><span class="s2">: </span><span class="s0">Column</span><span class="s2">(</span>
+        <span class="s0">children</span><span class="s2">: [</span>
+          <span class="s5">// Total Payments Summary</span>
+          <span class="s0">Container</span><span class="s2">(</span>
+            <span class="s0">padding</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s4">16</span><span class="s2">),</span>
+            <span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">blue</span><span class="s2">[</span><span class="s4">50</span><span class="s2">],</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span>
+              <span class="s1">&quot;Total Earnings: ₹</span><span class="s2">$</span><span class="s0">totalEarnings</span><span class="s1">&quot;</span><span class="s2">,</span>
+              <span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">20</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">),</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+          <span class="s0">Expanded</span><span class="s2">(</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">ListView</span><span class="s2">.</span><span class="s0">builder</span><span class="s2">(</span>
+              <span class="s0">padding</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s4">16</span><span class="s2">),</span>
+              <span class="s0">itemCount</span><span class="s2">: </span><span class="s0">paymentHistory</span><span class="s2">.</span><span class="s0">length</span><span class="s2">,</span>
+              <span class="s0">itemBuilder</span><span class="s2">: (</span><span class="s0">context</span><span class="s2">, </span><span class="s0">index</span><span class="s2">) {</span>
+                <span class="s3">var </span><span class="s0">payment </span><span class="s2">= </span><span class="s0">paymentHistory</span><span class="s2">[</span><span class="s0">index</span><span class="s2">];</span>
+                <span class="s3">return </span><span class="s0">Card</span><span class="s2">(</span>
+                  <span class="s0">elevation</span><span class="s2">: </span><span class="s4">4</span><span class="s2">,</span>
+                  <span class="s0">margin</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">symmetric</span><span class="s2">(</span><span class="s0">vertical</span><span class="s2">: </span><span class="s4">8</span><span class="s2">),</span>
+                  <span class="s0">child</span><span class="s2">: </span><span class="s0">ListTile</span><span class="s2">(</span>
+                    <span class="s0">title</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Patient: </span><span class="s2">${</span><span class="s0">payment</span><span class="s2">[</span><span class="s1">&quot;patient&quot;</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">)),</span>
+                    <span class="s0">subtitle</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Date: </span><span class="s2">${</span><span class="s0">payment</span><span class="s2">[</span><span class="s1">'date'</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">),</span>
+                    <span class="s0">trailing</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;₹</span><span class="s2">${</span><span class="s0">payment</span><span class="s2">[</span><span class="s1">'amount'</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">green</span><span class="s2">, </span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">16</span><span class="s2">)),</span>
+                  <span class="s2">),</span>
+                <span class="s2">);</span>
+              <span class="s2">},</span>
+            <span class="s2">),</span>
+          <span class="s2">),</span>
+        <span class="s2">],</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

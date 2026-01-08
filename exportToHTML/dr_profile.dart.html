@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>dr_profile.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #6aab73;}
+.s2 { color: #bcbec4;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #2aacb8;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+dr_profile.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:untitled2/ductur/statistics.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:untitled2/ductur/all_reports.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:untitled2/ductur/payments.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:untitled2/ductur/history.dart'</span><span class="s2">;</span>
+
+<span class="s3">class </span><span class="s0">DrProfilePage </span><span class="s3">extends </span><span class="s0">StatelessWidget </span><span class="s2">{</span>
+  <span class="s3">final </span><span class="s0">Map</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">, </span><span class="s0">dynamic</span><span class="s2">&gt; </span><span class="s0">doctorData</span><span class="s2">;</span>
+
+  <span class="s3">const </span><span class="s0">DrProfilePage</span><span class="s2">({</span><span class="s0">Key</span><span class="s2">? </span><span class="s0">key</span><span class="s2">, </span><span class="s0">required </span><span class="s3">this</span><span class="s2">.</span><span class="s0">doctorData</span><span class="s2">}) : </span><span class="s3">super</span><span class="s2">(</span><span class="s0">key</span><span class="s2">: </span><span class="s0">key</span><span class="s2">);</span>
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build</span><span class="s2">(</span><span class="s0">BuildContext context</span><span class="s2">) {</span>
+    <span class="s3">return </span><span class="s0">Scaffold</span><span class="s2">(</span>
+      <span class="s0">appBar</span><span class="s2">: </span><span class="s0">AppBar</span><span class="s2">(</span><span class="s0">title</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Doctor Profile&quot;</span><span class="s2">), </span><span class="s0">backgroundColor</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">blueAccent</span><span class="s2">),</span>
+      <span class="s0">body</span><span class="s2">: </span><span class="s0">SingleChildScrollView</span><span class="s2">(</span>
+        <span class="s0">padding</span><span class="s2">: </span><span class="s3">const </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s4">16.0</span><span class="s2">),</span>
+        <span class="s0">child</span><span class="s2">: </span><span class="s0">Column</span><span class="s2">(</span>
+          <span class="s0">crossAxisAlignment</span><span class="s2">: </span><span class="s0">CrossAxisAlignment</span><span class="s2">.</span><span class="s0">start</span><span class="s2">,</span>
+          <span class="s0">children</span><span class="s2">: [</span>
+            <span class="s5">// Profile Section</span>
+            <span class="s0">Center</span><span class="s2">(</span>
+              <span class="s0">child</span><span class="s2">: </span><span class="s0">Column</span><span class="s2">(</span>
+                <span class="s0">children</span><span class="s2">: [</span>
+                  <span class="s0">CircleAvatar</span><span class="s2">(</span>
+                    <span class="s0">radius</span><span class="s2">: </span><span class="s4">50</span><span class="s2">,</span>
+                    <span class="s0">backgroundImage</span><span class="s2">: </span><span class="s0">AssetImage</span><span class="s2">(</span><span class="s1">'assets/images/doctor_placeholder.png'</span><span class="s2">),</span>
+                  <span class="s2">),</span>
+                  <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">10</span><span class="s2">),</span>
+                  <span class="s0">Text</span><span class="s2">(</span><span class="s0">doctorData</span><span class="s2">[</span><span class="s1">'name'</span><span class="s2">], </span><span class="s0">style</span><span class="s2">: </span><span class="s0">_headerStyle</span><span class="s2">),</span>
+                  <span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Specialisation: </span><span class="s2">${</span><span class="s0">doctorData</span><span class="s2">[</span><span class="s1">'specialisation'</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">_subTextStyle</span><span class="s2">),</span>
+                  <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">5</span><span class="s2">),</span>
+                  <span class="s0">Text</span><span class="s2">(</span><span class="s1">&quot;Doctor ID: D-</span><span class="s2">${</span><span class="s0">doctorData</span><span class="s2">.</span><span class="s0">hashCode </span><span class="s2">% </span><span class="s4">10000</span><span class="s2">}</span><span class="s1">&quot;</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">_idStyle</span><span class="s2">),</span>
+                <span class="s2">],</span>
+              <span class="s2">),</span>
+            <span class="s2">),</span>
+            <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">20</span><span class="s2">),</span>
+
+            <span class="s5">// Hospital and Charges</span>
+            <span class="s0">_buildCard</span><span class="s2">(</span>
+              <span class="s0">title</span><span class="s2">: </span><span class="s1">&quot;Hospital: </span><span class="s2">${</span><span class="s0">doctorData</span><span class="s2">[</span><span class="s1">'hospital'</span><span class="s2">]}</span><span class="s1">&quot;</span><span class="s2">,</span>
+              <span class="s0">subtitle</span><span class="s2">: </span><span class="s1">&quot;Consultation Charges: ₹1500&quot;</span><span class="s2">,</span>
+            <span class="s2">),</span>
+
+            <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">20</span><span class="s2">),</span>
+
+            <span class="s5">// Current Appointments</span>
+            <span class="s0">_buildContainer</span><span class="s2">(</span>
+              <span class="s0">icon</span><span class="s2">: </span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">local_hospital</span><span class="s2">,</span>
+              <span class="s0">text</span><span class="s2">: </span><span class="s1">&quot;Currently Appointed: </span><span class="s2">${</span><span class="s0">doctorData</span><span class="s2">[</span><span class="s1">'patientsAssigned'</span><span class="s2">].</span><span class="s0">length</span><span class="s2">} </span><span class="s1">patients&quot;</span><span class="s2">,</span>
+            <span class="s2">),</span>
+
+            <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">20</span><span class="s2">),</span>
+
+            <span class="s5">// Summary</span>
+            <span class="s0">_buildCard</span><span class="s2">(</span>
+              <span class="s0">title</span><span class="s2">: </span><span class="s1">&quot;Doctor Summary&quot;</span><span class="s2">,</span>
+              <span class="s0">subtitle</span><span class="s2">: </span><span class="s1">&quot;Experience: </span><span class="s2">${</span><span class="s0">doctorData</span><span class="s2">[</span><span class="s1">'experience'</span><span class="s2">]} </span><span class="s1">years\n&quot;</span>
+                  <span class="s1">&quot;Revenue Earned: ₹</span><span class="s2">${</span><span class="s0">doctorData</span><span class="s2">[</span><span class="s1">'revenueEarned'</span><span class="s2">]}</span><span class="s1">\n&quot;</span>
+                  <span class="s1">&quot;Successful Treatments: 120+&quot;</span><span class="s2">,</span>
+            <span class="s2">),</span>
+
+            <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">20</span><span class="s2">),</span>
+
+            <span class="s5">// Footer Buttons</span>
+            <span class="s0">Column</span><span class="s2">(</span>
+              <span class="s0">children</span><span class="s2">: [</span>
+                <span class="s0">_buildFooterButton</span><span class="s2">(</span><span class="s0">context</span><span class="s2">, </span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">bar_chart</span><span class="s2">, </span><span class="s1">&quot;Statistics&quot;</span><span class="s2">, </span><span class="s0">StatisticsPage</span><span class="s2">()),</span>
+                <span class="s0">_buildFooterButton</span><span class="s2">(</span><span class="s0">context</span><span class="s2">, </span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">picture_as_pdf</span><span class="s2">, </span><span class="s1">&quot;All Reports&quot;</span><span class="s2">, </span><span class="s0">AllReportsPage</span><span class="s2">()),</span>
+                <span class="s0">_buildFooterButton</span><span class="s2">(</span><span class="s0">context</span><span class="s2">, </span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">payment</span><span class="s2">, </span><span class="s1">&quot;Payments&quot;</span><span class="s2">, </span><span class="s0">PaymentsPage</span><span class="s2">()),</span>
+                <span class="s0">_buildFooterButton</span><span class="s2">(</span><span class="s0">context</span><span class="s2">, </span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">history</span><span class="s2">, </span><span class="s1">&quot;History&quot;</span><span class="s2">, </span><span class="s0">HistoryPage</span><span class="s2">()),</span>
+              <span class="s2">],</span>
+            <span class="s2">),</span>
+          <span class="s2">],</span>
+        <span class="s2">),</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s5">// 🏥 Reusable Card Widget</span>
+  <span class="s0">Widget _buildCard</span><span class="s2">({</span><span class="s0">required String title</span><span class="s2">, </span><span class="s0">required String subtitle</span><span class="s2">}) {</span>
+    <span class="s3">return </span><span class="s0">Card</span><span class="s2">(</span>
+      <span class="s0">shape</span><span class="s2">: </span><span class="s0">RoundedRectangleBorder</span><span class="s2">(</span><span class="s0">borderRadius</span><span class="s2">: </span><span class="s0">BorderRadius</span><span class="s2">.</span><span class="s0">circular</span><span class="s2">(</span><span class="s4">10</span><span class="s2">)),</span>
+      <span class="s0">elevation</span><span class="s2">: </span><span class="s4">4</span><span class="s2">,</span>
+      <span class="s0">child</span><span class="s2">: </span><span class="s0">Padding</span><span class="s2">(</span>
+        <span class="s0">padding</span><span class="s2">: </span><span class="s3">const </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s4">16.0</span><span class="s2">),</span>
+        <span class="s0">child</span><span class="s2">: </span><span class="s0">Column</span><span class="s2">(</span>
+          <span class="s0">crossAxisAlignment</span><span class="s2">: </span><span class="s0">CrossAxisAlignment</span><span class="s2">.</span><span class="s0">start</span><span class="s2">,</span>
+          <span class="s0">children</span><span class="s2">: [</span>
+            <span class="s0">Text</span><span class="s2">(</span><span class="s0">title</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">_sectionTitleStyle</span><span class="s2">),</span>
+            <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">height</span><span class="s2">: </span><span class="s4">8</span><span class="s2">),</span>
+            <span class="s0">Text</span><span class="s2">(</span><span class="s0">subtitle</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">_sectionTextStyle</span><span class="s2">),</span>
+          <span class="s2">],</span>
+        <span class="s2">),</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s5">// 🔹 Reusable Info Container</span>
+  <span class="s0">Widget _buildContainer</span><span class="s2">({</span><span class="s0">required IconData icon</span><span class="s2">, </span><span class="s0">required String text</span><span class="s2">}) {</span>
+    <span class="s3">return </span><span class="s0">Container</span><span class="s2">(</span>
+      <span class="s0">padding</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">all</span><span class="s2">(</span><span class="s4">16</span><span class="s2">),</span>
+      <span class="s0">decoration</span><span class="s2">: </span><span class="s0">BoxDecoration</span><span class="s2">(</span>
+        <span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">blue</span><span class="s2">[</span><span class="s4">50</span><span class="s2">],</span>
+        <span class="s0">borderRadius</span><span class="s2">: </span><span class="s0">BorderRadius</span><span class="s2">.</span><span class="s0">circular</span><span class="s2">(</span><span class="s4">10</span><span class="s2">),</span>
+      <span class="s2">),</span>
+      <span class="s0">child</span><span class="s2">: </span><span class="s0">Row</span><span class="s2">(</span>
+        <span class="s0">children</span><span class="s2">: [</span>
+          <span class="s0">Icon</span><span class="s2">(</span><span class="s0">icon</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">blue</span><span class="s2">, </span><span class="s0">size</span><span class="s2">: </span><span class="s4">40</span><span class="s2">),</span>
+          <span class="s0">SizedBox</span><span class="s2">(</span><span class="s0">width</span><span class="s2">: </span><span class="s4">10</span><span class="s2">),</span>
+          <span class="s0">Expanded</span><span class="s2">(</span>
+            <span class="s0">child</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s0">text</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">16</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">)),</span>
+          <span class="s2">),</span>
+        <span class="s2">],</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s5">// 🔹 Footer Button Widget</span>
+  <span class="s0">Widget _buildFooterButton</span><span class="s2">(</span><span class="s0">BuildContext context</span><span class="s2">, </span><span class="s0">IconData icon</span><span class="s2">, </span><span class="s0">String title</span><span class="s2">, </span><span class="s0">Widget page</span><span class="s2">) {</span>
+    <span class="s3">return </span><span class="s0">Card</span><span class="s2">(</span>
+      <span class="s0">elevation</span><span class="s2">: </span><span class="s4">3</span><span class="s2">,</span>
+      <span class="s0">margin</span><span class="s2">: </span><span class="s0">EdgeInsets</span><span class="s2">.</span><span class="s0">symmetric</span><span class="s2">(</span><span class="s0">vertical</span><span class="s2">: </span><span class="s4">8</span><span class="s2">),</span>
+      <span class="s0">child</span><span class="s2">: </span><span class="s0">ListTile</span><span class="s2">(</span>
+        <span class="s0">leading</span><span class="s2">: </span><span class="s0">Icon</span><span class="s2">(</span><span class="s0">icon</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">blue</span><span class="s2">),</span>
+        <span class="s0">title</span><span class="s2">: </span><span class="s0">Text</span><span class="s2">(</span><span class="s0">title</span><span class="s2">, </span><span class="s0">style</span><span class="s2">: </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">)),</span>
+        <span class="s0">trailing</span><span class="s2">: </span><span class="s0">Icon</span><span class="s2">(</span><span class="s0">Icons</span><span class="s2">.</span><span class="s0">arrow_forward_ios</span><span class="s2">, </span><span class="s0">size</span><span class="s2">: </span><span class="s4">18</span><span class="s2">),</span>
+        <span class="s0">onTap</span><span class="s2">: () =&gt; </span><span class="s0">Navigator</span><span class="s2">.</span><span class="s0">push</span><span class="s2">(</span><span class="s0">context</span><span class="s2">, </span><span class="s0">MaterialPageRoute</span><span class="s2">(</span><span class="s0">builder</span><span class="s2">: (</span><span class="s0">context</span><span class="s2">) =&gt; </span><span class="s0">page</span><span class="s2">)),</span>
+      <span class="s2">),</span>
+    <span class="s2">);</span>
+  <span class="s2">}</span>
+
+  <span class="s5">// 🎨 Styles</span>
+  <span class="s3">final </span><span class="s0">TextStyle _headerStyle </span><span class="s2">= </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">22</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">);</span>
+  <span class="s3">final </span><span class="s0">TextStyle _subTextStyle </span><span class="s2">= </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">16</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">grey</span><span class="s2">);</span>
+  <span class="s3">final </span><span class="s0">TextStyle _idStyle </span><span class="s2">= </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">14</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">grey</span><span class="s2">);</span>
+  <span class="s3">final </span><span class="s0">TextStyle _sectionTitleStyle </span><span class="s2">= </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">18</span><span class="s2">, </span><span class="s0">fontWeight</span><span class="s2">: </span><span class="s0">FontWeight</span><span class="s2">.</span><span class="s0">bold</span><span class="s2">);</span>
+  <span class="s3">final </span><span class="s0">TextStyle _sectionTextStyle </span><span class="s2">= </span><span class="s3">const </span><span class="s0">TextStyle</span><span class="s2">(</span><span class="s0">fontSize</span><span class="s2">: </span><span class="s4">16</span><span class="s2">, </span><span class="s0">color</span><span class="s2">: </span><span class="s0">Colors</span><span class="s2">.</span><span class="s0">grey</span><span class="s2">);</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
